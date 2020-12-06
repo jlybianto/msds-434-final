@@ -15,5 +15,12 @@ def name(value):
     }
     return jsonify(val)
 
+@app.route('/northwestern')
+def origin():
+    val = {
+        "value": "northwestern"
+    }
+    return jsonify(val)
+
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port=8080, debug=True)
