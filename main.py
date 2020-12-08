@@ -43,8 +43,8 @@ def submit_file():
             for r in result:
                 final_class.append(str(r.display_name))
             for s in result:
-                final_score.append(s.classification.score)
-            res = {final_class[i]: final_score[round(i, 6)] for i in range(len(final_class))}
+                final_score.append(round(s.classification.score, 6))
+            res = {final_class[i]: final_score[i] for i in range(len(final_class))}
             print(res)
             return jsonify(res)
 
