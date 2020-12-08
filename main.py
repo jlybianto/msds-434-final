@@ -1,9 +1,7 @@
 #----------------------------------------------------------------------------#
 # Imports
 #----------------------------------------------------------------------------#
-from flask import Flask, jsonify, render_template, request, redirect, flash, url_for
-import logging
-from logging import Formatter, FileHandler
+from flask import Flask, jsonify, render_template, request, redirect, flash
 import os
 from predict import get_prediction
 from werkzeug.utils import secure_filename
