@@ -1,5 +1,6 @@
 Flask==1.1.1
 google-cloud-automl
+google-cloud-storage
 pytest
 pylint
 jupyter

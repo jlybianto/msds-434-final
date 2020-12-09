@@ -1,4 +1,4 @@
-from google.cloud import automl
+from google.cloud import automl, storage
 from google.oauth2 import service_account
 
 def get_prediction(file_path):
@@ -7,7 +7,7 @@ def get_prediction(file_path):
     model_id = "ICN7344581542892535808"
     # file_path = "uploads/city.png" ## for local image testing
 
-    credentials = service_account.Credentials.from_service_account_file("/home/jesse_lybianto/msds-434-final/msds-434-final-db35f3a74a12.json")
+    credentials = service_account.Credentials.from_service_account_file("/home/jesse_lybianto/msds-434-final/msds-434-final-f32a0ccc78d5.json")
     prediction_client = automl.PredictionServiceClient(credentials=credentials)
 
     # Get the full path of the model.
