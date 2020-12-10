@@ -19,7 +19,7 @@ def get_prediction(file_path):
     with open(file_path, "rb") as content_file:
         content = content_file.read()
 
-    image = automl.Image(image_bytes=content)
+    image = automl.Image(image_bytes=file_path)
     payload = automl.ExamplePayload(image=image)
 
     # params is additional domain-specific parameters.
